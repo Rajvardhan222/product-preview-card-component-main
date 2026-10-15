@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 0.6875rem; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: hsl(30, 38%, 92%);
+      font-family: 'Montserrat';
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .card {
+      max-width: 350px;
+      box-sizing: border-box;
+      border-radius: 8px;
+      background-color: white;
+      overflow: hidden;
+     
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+    }
+    p {
+      font-size: 14px;
+    }
+    #category{
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color:hsl(228, 12%, 48%) ;
+    }
+
+    .card > picture > img {
+      max-width: 100%;
+      height : auto;
+    }
+    .detail {
+      margin-inline: 1.6rem;
+    }
+    h1{
+      font-family: 'Fraunces';
+    }
+    .amount {
+      font-family: 'Fraunces';
+    }
+    #description{
+      color:hsl(228, 12%, 48%) ;
+      font-weight: 500;
+    }
+
+    .amount {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+
+      & p:first-child {
+        font-size: x-large;
+        color: hsl(158, 36%, 37%);
+        font-weight: bold;
+      }
+      & p:last-child  {
+        color: hsl(228, 12%, 48%);
+        text-decoration: line-through;
+      }
+    }
+
+    button {
+      width: 100%;
+      padding-block: 12px;
+      background-color:hsl(158, 36%, 37%) ;
+      outline: none;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: hsl(158, 42%, 18%);
+      cursor: pointer;
+    }
+    .detail {
+       padding-block: 20px;
+    }
+
+    @media (min-width: 600px){
+      .card{
+        flex-direction: row;
+        max-width: 600px;
+        align-items: stretch;
+      }
+      .card > picture > img {
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    
+
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <picture>
+      <source media="(max-width: 600px)" srcset="./images/image-product-mobile.jpg">
+      <img src="./images/image-product-desktop.jpg" alt="" srcset="">
+    </picture>
+    <div class="detail">
+      <p id="category">Perfume</p>
+      <h1>Gabrielle Essence Eau De Parfum</h1>
+      <p id="description">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+  Perfumer-Creator for the House of CHANEL.</p>
+      <div class="amount">
+        <p>$149.99</p>
+        <p>$169.99</p>
+      </div>
+      <button><span><img src="/images/icon-cart.svg" alt="" srcset=""></span>Add to Cart</button>
+    </div>
+  </div>
+
+
+  
+  <!-- <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer> -->
+</body>
+</html>
